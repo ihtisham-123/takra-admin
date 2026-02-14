@@ -59,7 +59,7 @@ const DownloadButton = ({ text }) => {
   if (isInstalled) {
     return (
       <button
-        className="px-5 py-2.5 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-medium tracking-wide border border-emerald-500/30 cursor-default"
+        className="px-5 py-2.5 rounded-full bg-emerald-50 text-emerald-700 text-sm font-medium tracking-wide border border-emerald-200 cursor-default shadow-md"
       >
         ✓ Installed
       </button>
@@ -69,7 +69,7 @@ const DownloadButton = ({ text }) => {
   return (
     <button
       onClick={handleInstallClick}
-      className="group relative px-5 py-2.5 rounded-full bg-white text-black text-sm font-medium tracking-wide transition-all duration-300 hover:shadow-[0_0_20px_rgba(255,255,255,0.3)] overflow-hidden"
+      className="group relative px-5 py-2.5 rounded-full bg-gradient-to-r from-red-900 to-red-800 text-white text-sm font-medium tracking-wide transition-all duration-300 hover:shadow-[0_0_20px_rgba(139,0,0,0.3)] overflow-hidden"
     >
       <span className="relative z-10 flex items-center gap-2">
         <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -77,7 +77,7 @@ const DownloadButton = ({ text }) => {
         </svg>
         {text}
       </span>
-      <span className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-400 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></span>
+      <span className="absolute inset-0 bg-gradient-to-r from-red-800 to-red-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
     </button>
   );
 };

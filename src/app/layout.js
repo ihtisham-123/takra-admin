@@ -9,35 +9,35 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "Web Wizards",
-  description: "Your Gateway to the Digital World",
+  title: "UCP TAAKRA",
+  description: "Pakistan's Premier University Competition Platform",
   manifest: "/manifest.json",
-  themeColor: "#0a0a0f",
   appleWebApp: {
     capable: true,
     statusBarStyle: "black-translucent",
-    title: "Web Wizards",
+    title: "UCP TAAKRA",
   },
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-    maximumScale: 1,
-    userScalable: false,
-  },
+};
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+  themeColor: "#7f1d1d",
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" data-scroll-behavior="smooth">
       <head>
         <link rel="manifest" href="/manifest.json" />
-        <meta name="theme-color" content="#0a0a0f" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-        <meta name="apple-mobile-web-app-title" content="Web Wizards" />
+        <meta name="apple-mobile-web-app-title" content="UCP TAAKRA" />
         <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
       </head>
-      <body className={`${inter.className} bg-[#0a0a0f] min-h-screen antialiased`}>
+      <body className={`${inter.className} bg-white min-h-screen antialiased`}>
         <Navbar />
         <main>{children}</main>
         <Script id="register-sw" strategy="afterInteractive">
